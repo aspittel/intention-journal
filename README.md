@@ -15,3 +15,5 @@ Then in the editor:
 ```
 
 The above command will run every day at 8:50 AM if your folder is in the directory code with the folder name journal! You can edit this to be at a different time, to only run on week days, or at a different folder on your computer!
+
+Right now, each day a file will generate in a "morning" folder in the project directory with the file named with the current date.

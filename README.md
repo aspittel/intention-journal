@@ -11,7 +11,7 @@ $ env EDITOR=nano crontab -e
 Then in the editor:
 
 ```
-50 8 * * * ~/code/journal/script/journal.py
+50 8 * * * python ~/code/journal/script/journal.py
 ```
 
 The above command will run every day at 8:50 AM if your folder is in the directory code with the folder name journal! You can edit this to be at a different time, to only run on week days, or at a different folder on your computer!

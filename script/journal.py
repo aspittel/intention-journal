@@ -1,6 +1,5 @@
 import datetime, os
-
-import os
+from subprocess import call
 
 def write_header_with_bullet_points(markdown_file, header_text):
     markdown_file.write("\n## " + header_text + "\n")
@@ -9,7 +8,8 @@ def write_header_with_bullet_points(markdown_file, header_text):
 
 date = datetime.datetime.today().strftime('%Y-%m-%d')
 current_path = os.path.dirname(os.path.realpath(__file__))
-path = os.path.join(current_path, "../morning/") + date + ".md"
+morning_path = os.path.join(current_path, "../morning/")
+path = morning_path + date + ".md"
 
 markdown_file = open(path, "w+")
 
@@ -19,3 +19,5 @@ write_header_with_bullet_points(markdown_file, "Today I'm grateful for:")
 write_header_with_bullet_points(markdown_file, "Today's focus is:")
 
 markdown_file.close()
+
+call(["code", morning_path])
